@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ChangeRoleRequest; // Tambahkan ini
+use App\Models\User; // Tambahkan ini
+use App\Services\RoleManagementService; // Tambahkan ini
+use Illuminate\Http\RedirectResponse; // Tambahkan ini
 
 class RoleController extends Controller
 {

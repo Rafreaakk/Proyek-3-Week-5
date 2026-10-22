@@ -21,7 +21,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::patch('/admin/user/{user}/role',
+Route::patch('/admin/users/{user}/role',
     [RoleController::class, 'update'])
     ->middleware(['auth', 'can:manage-roles'])
-    ->name('admin.user.role.update');
+    ->name('admin.users.role.update');
+
+    // Rute simulasi untuk testing Gate use-cart
+Route::post('/cart/add', function () {
+    return 'Sukses menambah barang ke keranjang!';
+})->middleware(['auth', 'can:use-cart']);

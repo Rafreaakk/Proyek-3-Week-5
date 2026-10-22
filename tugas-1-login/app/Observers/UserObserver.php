@@ -21,7 +21,7 @@ class UserObserver
      */
     public function updated(User $user): void
     {
-        if (! $user->wasChange('role')) return;
+        if (! $user->wasChanged('role')) return;
 
         Log::info('user.role.changed', [
             'target_user_id' => $user->id,

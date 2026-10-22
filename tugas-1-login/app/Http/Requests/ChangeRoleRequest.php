@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Http\Requests\ChangeRoleRequest;
+use Illuminate\Validation\Rule;
 
 class ChangeRoleRequest extends FormRequest
 {
